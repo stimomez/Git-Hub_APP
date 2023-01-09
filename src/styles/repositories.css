@@ -1,0 +1,16 @@
+.button-link{
+    background: #2da44e;
+    color: white;
+    border-radius: 10px;
+        transition: .30s;
+
+
+}
+.button-link:hover{
+    background: white;
+    color: #2da44e;
+    border: 1px solid #2da44e;
+    transition: .30s;
+    
+  
+}
