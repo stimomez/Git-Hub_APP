@@ -53,7 +53,7 @@ const UserDetails = () => {
   }, [user, dispatch]);
   if ((repos.length || orgs.length) && isRepos) {
     return (
-      <div className="user-details">
+      <>
         {repos.length ? (
           <Repositories repositories={repos} userr={user.login} />
         ) : (
@@ -64,7 +64,7 @@ const UserDetails = () => {
         ) : (
           <NoReposOrgs userr={{ user: "org" }} />
         )}
-      </div>
+      </>
     );
   } else if (isRepos && !repos.length && !orgs.length) {
     return (

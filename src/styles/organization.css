@@ -1,0 +1,40 @@
+.ul-organization {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+  gap: 24px;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+.ul__container {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+border-radius: 15px;
+
+  
+}
+.container__img {
+  width: 100%;
+  object-fit: contain;
+border-radius: 15px;
+
+}
+.container__h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.container__button--view {
+  cursor: pointer;
+  width: 95%;
+  margin: 0 auto 5px auto;
+  padding: 10px;
+  border-radius: 15px;
+  border: 0;
+  color: #0dcaf0;
+}
+.container__button--view:hover {
+  background: #0dcaf0;
+  color: #fff;
+}

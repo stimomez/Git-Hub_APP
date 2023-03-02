@@ -1,6 +1,5 @@
 import Aos from "aos";
 import React, { useEffect, useState } from "react";
-import { Card } from "react-bootstrap";
 import CopyToClipboard from "react-copy-to-clipboard";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -35,76 +34,44 @@ const Repositories = ({ repositories, userr }) => {
   };
   return (
     <>
-      <h3 className="text-uppercase fs-1 text-primary">{user}</h3>
+      <h2 className="title">{user}</h2>
 
-      <div className="p-1 ">
-        <h4 className="text-start px-5 text-info"> Repositories</h4>
+      <h4 className="sub-title"> Repositories</h4>
 
-        <div
-          className=""
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 550px))",
-            gap: "24px",
-            justifyContent: "center",
-          }}
-        >
-          {repos.map((repo) => (
-            <Card
-              data-aos="zoom-in-up"
-              style={{ background: "#e2e2e2", color: "#120907" }}
-              key={repo.id}
-            >
-              <Card.Body className="d-flex flex-column align-items-center justify-content-around rounded shadow-lg">
-                <Card.Title className="text-uppercase fw-bold fs-4  container">
-                  {repo.name}
-                </Card.Title>
-                <Card.Subtitle className="mb-2 text-muted container">
-                  {repo.description}
-                </Card.Subtitle>
-                <span>Git Clone</span>
-                <div className="d-flex justify-content-around shadow  px-2 rounded container ">
-                  <Card.Text
-                    style={{ width: "80%", fontSize: "12px" }}
-                    className="my-auto align-items-center  "
-                  >
-                    {repo.clone_url}
-                  </Card.Text>
-                  <div className="row px-2 align-items-center position-relative">
-                    <span
-                      style={{ cursor: "pointer" }}
-                      onClick={() => gitClone(repo.id)}
-                    >
-                      <CopyToClipboard text={repo.clone_url}>
-                        <i
-                          className={`${
-                            repo.id === clipBoard
-                              ? "fa-solid fa-check"
-                              : " fa-regular fa-copy"
-                          }`}
-                        ></i>
-                      </CopyToClipboard>
-                    </span>
-                    {repo.id === clipBoard && (
-                      <span className="row mt-4 p-1 position-absolute">
-                        Copied{" "}
-                      </span>
-                    )}
-                  </div>
-                </div>
-
-                <Card.Link
-                  className="text-decoration-none text-uppercase mt-3 border px-4 py-1 button-link"
-                  href={repo.clone_url}
-                  target="_blank"
-                >
-                  <span onClick={redirectHome}>go</span>
-                </Card.Link>
-              </Card.Body>
-            </Card>
-          ))}
-        </div>
-      </div>
+      {repos.map((repo) => (
+        <ul className="card" data-aos="zoom-in-up" key={repo.id}>
+          <li className="card__title">{repo.name}</li>
+          <li className="card__li">{repo.description}</li>
+          <span className="card__li">Git Clone</span>
+          <div className="card__url">
+            <p className="card__p">{repo.clone_url}</p>
+            <div className="copy-clip">
+              <span
+                className="copy-clip--copy"
+                onClick={() => gitClone(repo.id)}
+              >
+                <CopyToClipboard text={repo.clone_url}>
+                  <i
+                    className={`${
+                      repo.id === clipBoard
+                        ? "fa-solid fa-check"
+                        : " fa-regular fa-copy"
+                    }`}
+                  ></i>
+                </CopyToClipboard>
+              </span>
+              {repo.id === clipBoard && (
+                <span className="copy-clip--copied">Copied </span>
+              )}
+            </div>
+          </div>
+          <a className="card__links" href={repo.clone_url} target="blank">
+            <span className="card__link--redirect" onClick={redirectHome}>
+              go
+            </span>
+          </a>
+        </ul>
+      ))}
     </>
   );
 };

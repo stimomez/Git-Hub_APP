@@ -2,7 +2,7 @@
 
 **Instalacion:**
 
-Debes tener instalado nodeJS una vez clonado el proyecto, posteriormente ejecutar el comando:
+Debes tener instalado nodeJS, una vez clonado el proyecto ejecutar el comando:
 
 _npm install_
 
@@ -12,8 +12,8 @@ _¨npm start_
 
 **Introducción**
 
-Git-Hub_APP es un proyecto de busqueda de usuarios de git-hub, en el buscador pones el nombre del usuario y te aparece información referente a dicha busqueda. Este es el link de la API que utilize para dicho proyecto:
+Git-Hub_APP es un proyecto de busqueda de usuarios de git-hub, en el buscador pones el nombre del usuario, te aparece información referente a dicha busqueda. Este es el link de la API que utilize para este proyecto:
 
 [https://docs.github.com/en/rest/search?apiVersion=2022-11-28#search-users](https://docs.github.com/en/rest/search?apiVersion=2022-11-28#search-users "GitHubo API")
 
-# Git-Hubo_APP
+# Git-Hub_APP

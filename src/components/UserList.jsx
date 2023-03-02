@@ -1,35 +1,22 @@
-import React from "react";
-import { Button, Card } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { isLoading } from "../store/slices/user";
-
-
+import "../styles/user-list.css";
 
 const UserList = ({ users }) => {
   const dispatch = useDispatch();
 
   return (
-    <div
-      className="p-5"
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(255px, 450px))",
-        gap: "30px",
-        justifyContent: "center",
-      }}
-    >
+    <>
       {users.map((user) => (
-        <Card  key={user.id}>
-          <Card.Img variant="top" src={user.avatar_url} />
-          <Card.Body>
-            <Card.Title className="text-uppercase">{user.login}</Card.Title>
-          </Card.Body>
-          <Card.Footer>
+          <ul className="ul" key={user.id}>
+            <img className="ul__img" src={user.avatar_url} alt="" />
+
+            <h1 className="ul__title">{user.login}</h1>
+
             <Link to={`users/${user.id}`}>
-              <Button
-                variant="outline-info"
-                className="px-5"
+              <button
+                className="form__button--submit ul__button--submit"
                 onClick={() => {
                   dispatch(isLoading(true));
                   window.scrollTo(0, 0);
@@ -37,12 +24,11 @@ const UserList = ({ users }) => {
               >
                 {" "}
                 More Information
-              </Button>
+              </button>
             </Link>
-          </Card.Footer>
-        </Card>
+          </ul>
       ))}
-    </div>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "react-bootstrap";
+
 
 const NoReposOrgs = ({ userr, noRepos }) => {
   const [user, setUser] = useState({});
@@ -15,36 +15,34 @@ const NoReposOrgs = ({ userr, noRepos }) => {
   console.log(user);
 
   return (
-    <div>
+    <>
       {user.login ? (
-        <h3 className="text-uppercase fs-1 text-primary">
-          {user && user.login}
-        </h3>
+        <h2 className="sub-title">{user && user.login}</h2>
       ) : (
         <p>
           <br />
         </p>
       )}
 
-      <Card className="mx-auto" style={{ width: "24%", minWidth: "12rem" }}>
-        <Card.Img
-          variant="top"
+      <div className="card">
+        <img
+          className="card__img"
           src="https://media3.giphy.com/media/3og0IvGtnDyPHCRaYU/giphy.gif"
+          alt=""
         />
-        <Card.Body>
-          <Card.Title>
-            <span>
-              No <br />
-            </span>
-            {user === "repo"
-              ? "Repository"
-              : user === "org"
-              ? "Organization"
-              : "Information"}
-          </Card.Title>
-        </Card.Body>
-      </Card>
-    </div>
+
+        <div>
+          <span>
+            No <br />
+          </span>
+          {user === "repo"
+            ? "Repository"
+            : user === "org"
+            ? "Organization"
+            : "Information"}
+        </div>
+      </div>
+    </>
   );
 };
 

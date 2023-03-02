@@ -1,20 +1,109 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-   background-image: url('https://images2.alphacoders.com/985/thumb-1920-985381.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    position: relative;
-    padding-bottom: 140px;
+  background-image: url("https://images2.alphacoders.com/985/thumb-1920-985381.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 140px;
+  min-width: 350px;
+  font-family: 'Shantell Sans', cursive;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.title {
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: rgb(27, 27, 221);
+  font-size: 2rem;
+}
+.form {
+  background: #f1ebeb;
+  padding: 10px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+.form__label {
+  padding: 10px;
+  background: #f0efef59;
+  color: rgb(77, 76, 75);
+  border-radius: 15px;
+  font-weight: 600;
+}
+.form__input {
+  width: 40%;
+  min-width: 200px;
+  padding: 10px;
+  outline: rgb(138, 138, 161);
+  margin: 2px 10px;
+  border-radius: 15px;
+  border: 0.4px;
+}
+.form__input:focus {
+  border: 1px solid blue;
+}
+.form__button--submit {
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 15px;
+}
+
+
+.form__button--submit:hover{
+  background: rgb(32, 32, 32);
+  color: #fff;
+  cursor: pointer;
+
+}
+.form__button--submit:disabled{
+  cursor: none;
+  background: disabled;
+}
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+  gap: 14px;
+  justify-content: center;
+  padding: 20px;
+
+}
+.footer {
+  height: 100px;
+  width: 100%;
+  background: #8a8477;
+  color: black;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__i{
+  font-size: 2rem;
+}
+
+@media (max-width: 420px) {
+.form{
+  display: flex;
+  flex-direction: column;
+}
+.form__input{
+  width: 80%;
+  margin: 0 auto;
+}
+.form__button--submit {
+    width: 40%;
+  margin: 10px auto;
+}
 }

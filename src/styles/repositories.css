@@ -1,16 +1,65 @@
-.button-link{
-    background: #2da44e;
-    color: white;
-    border-radius: 10px;
-        transition: .30s;
-
-
+.sub-title {
+  color: rgb(238, 224, 224);
+  font-size: 1.2rem;
 }
-.button-link:hover{
-    background: white;
-    color: #2da44e;
-    border: 1px solid #2da44e;
-    transition: .30s;
-    
-  
+.card {
+  background: #dbd4d4;
+  width: 70%;
+  min-width: 300px;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 15px;
+  height: auto;
 }
+.card__img{
+    width: 50%;
+}
+.card__title {
+  text-transform: uppercase;
+  list-style: none;
+  font-weight: bolder;
+}
+.card__li {
+  list-style: none;
+}
+.card__url {
+  background: #ebe2e2;
+  box-shadow: 1px 0.1px 0.9px 2px #ebe2e2;
+  width: 95%;
+  position: relative;
+  border-radius: 15px;
+  padding: 4px;
+  margin: 8px auto;
+}
+.card__p {
+  margin: 2px 0;
+  font-size: 0.6rem;
+  min-width: 100px;
+}
+.copy-clip {
+  text-align: center;
+  width: 20px;
+  position: absolute;
+  right: 2.5%;
+  top: 20%;
+  cursor: pointer;
+}
+.copy-clip--copied {
+  position: relative;
+  right: 50%;
+}
+.card__links {
+  text-decoration: none;
+  border-radius: 13px;
+  text-transform: uppercase;
+  background: rgb(49, 49, 214);
+  padding: 2px 19px;
+  color: #fff;
+  transition: 1s;
+}
+.card__links:hover {
+  background: #fff;
+  color: rgb(49, 49, 214);
+  transition: 1s;
+}
+

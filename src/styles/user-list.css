@@ -1,0 +1,27 @@
+.ul {
+  padding: 0;
+  background: rgb(180, 174, 174);
+  border-radius: 15px;
+}
+.ul__img {
+  border-radius: 15px;
+  width: 100%;
+}
+
+.ul__title {
+  text-transform: uppercase;
+  color: rgb(58, 58, 255);
+  margin: 0;
+}
+.ul__button--submit {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  transition: 1s;
+  cursor: pointer;
+}
+.ul__button--submit:hover {
+  color: #fff;
+  background: blue;
+  transition: 1s;
+}
