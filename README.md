@@ -1,4 +1,4 @@
-### Bienvenido al respositorio oficial de Git-Hubo_APP!!
+### Bienvenido al respositorio oficial de Git-Hub_APP!!
 
 **Instalacion:**
 
